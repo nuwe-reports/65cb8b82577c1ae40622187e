@@ -1,6 +1,14 @@
 # AccWe Hospital
+
+
+
+
 Cómo montar los Dockerfiles
 
+Crear la imagen .war del proyecto Maven
+```bash
+./mvnw clean package
+```
 Dockerfile.maven
 ```bash
 docker build -t spring-container -f Dockerfile.maven . && docker run -d -p 8080:8080 spring-container
@@ -12,6 +20,10 @@ docker build -t mysql-container -f Dockerfile.mysql . &&  docker run -d -p 3306:
 ```
 
 
+* UML de la Base de Datos
+
+![BD_UML.png](BD_UML.png)
+
 ## Conceptos a añadir
 
 [ESP](/)
@@ -21,3 +33,4 @@ repositorios genericos junto a un CRUD para evitar el código repetitivo, ademá
 [ENG](/)
 Knowing the project is a large scale project i would consider using generic repositories with CRUD to avoid making junk code,
 also i would try to make some DTO requests for the Frontend to make things easier.
+
